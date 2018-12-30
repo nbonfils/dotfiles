@@ -1,0 +1,36 @@
+#! /usr/bin/bash
+#
+# Script to backup my media folders to my Media external hard drive
+
+# Get the Media external hard drive device + state (mounted or not)
+# If the drive where to change DON'T FORGET to change the UUID
+DEV=($(lsblk -o PATH,UUID,MOUNTPOINT | awk '/.*d7bf9bb0-f12c-415b-86e4-1a9bf1c512f9.*/{print $1 " " $3}'))
+UNMOUNT=false
+
+if [ -n "$DEV" ]; then
+  # If not mounted, mount first then umount at the end
+  if [ -z "${DEV[1]}" ]; then
+    echo "Mounting $DEV..."
+    sudo mount $DEV /mnt
+    UNMOUNT=true
+    echo "Done!"
+  fi
+
+  # Backup the media dirs
+  echo "Backing up files..."
+  rsync -aP ~/videos/series ~/videos/films ~/music ~/videos/webms /mnt/
+  echo "Done!"
+
+  # Unmount if needed
+  if [ "$UNMOUNT" = true ]; then
+    echo "Unmounting $DEV..."
+    sudo umount -l /mnt
+    echo "Done!"
+  fi
+
+  exit
+else
+  # Media device not found
+  echo "Couldn't find Media external drive!"
+  exit 1
+fi

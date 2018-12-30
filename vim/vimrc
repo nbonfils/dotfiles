@@ -1,0 +1,179 @@
+" Simple vimrc
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+
+"""""""""
+" Plugins
+"--------
+
+" Vim-Plug section
+call plug#begin('~/.vim/plug')
+
+" Javascript related plugin
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Syntax checking
+Plug 'vim-syntastic/syntastic'
+
+" Golang plugin
+Plug 'fatih/vim-go'
+
+" Markdown support
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" Python ftplugin
+"Plug 'jbking/vim-pep8'
+
+" Autocompletion
+"Plug 'valloric/youcompleteme'
+
+" Lua plugin (just use for syntax check)
+"Plug 'xolox/vim-lua-ftplugin'
+"Plug 'xolox/vim-misc'
+
+" smarter indentation
+Plug 'tpope/vim-sleuth'
+
+Plug 'tpope/vim-surround'
+
+call plug#end()
+
+
+"""""""""""""""""
+" Base vim config
+"----------------
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+command W w !sudo tee % > /dev/null
+
+" Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=2
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Enable syntax highlighting
+syntax enable 
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Enable mouse
+set mouse=a
+
+" Line number
+set number
+
+" Folding
+"set foldmethod=indent
+
+
+""""""""""""""""
+" Plugin configs
+"---------------
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" Syntastic default config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+let g:syntastic_javascript_checkers = ['eslint']
+let g_syntastic_javascript_eslint_exe = 'npm run lint --'
+
+" For jsx in .js files (React)
+let g:jsx_ext_required = 0
+
+" Vim Mardown config
+let g:vim_markdown_folding_level = 1
+let g:vim_markdown_math = 1
+
+" YCM config
+"let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
+"let g:ycm_python_binary_path = '/usr/bin/python'
+"let g:ycm_always_populate_location_list = 1
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+" YCM location list highlight
+"highlight Search ctermbg=0
+
+" Lua precent omnifunc
+let g:lua_define_omnifunc = 0
+let g:lua_define_completfunc = 0
+
+" Webpack auto-recompilation
+set backupcopy=yes
+
+
+""""""""""""""
+" Key bindings
+"-------------
+
+" Mapping
+let mapleader = ","
+
+vnoremap  <leader>y  "+y
+nnoremap  <leader>y  "+y
+vnoremap  <leader>p  "+p
+nnoremap  <leader>p  "+p

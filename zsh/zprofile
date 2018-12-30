@@ -1,0 +1,15 @@
+#
+# ~/.zprofile
+#
+
+# Add a bin dir inside home to the PATH
+typeset -U path
+path=($(npm config get prefix)/bin $(go env GOPATH)/bin ~/bin $path[@])
+
+# # Start X11 on longin on tty1
+if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
+    startx
+fi
+
+eval $(ssh-agent) &> /dev/null
+ssh-add ~/.ssh/nopass_id_rsa &> /dev/null
