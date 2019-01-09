@@ -1,10 +1,15 @@
 # Script to deploy a fresh install easily
 # Run this as root, before running install.sh script
 
+# Get dir from where the script is located
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+#TODO update mirrors
+
 # Pacman hook to update systemd-boot
 echo "Setting up pacman hooks..."
 mkdir -p /etc/pacman.d/hooks
-ln -s etc/systemd-boot.hook /etc/pacman.d/hooks/
+ln -s $BASEDIR/etc/systemd-boot.hook /etc/pacman.d/hooks/
 echo "Done!"
 
 # Update the system and install the basic packages
@@ -12,7 +17,7 @@ echo "Get the latest update..."
 pacman -Syu
 echo "Done!"
 echo "Install basic packages..."
-pacman -S acpi ifplugd neovim openssh pass rsync sudo wpa_actiond wpa_supplicant zsh
+pacman -S acpi ifplugd neovim openssh pass rsync sudo wpa_actiond wpa_supplicant zsh tmux
 echo "Done!"
 
 # Create the user
