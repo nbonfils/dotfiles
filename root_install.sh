@@ -17,7 +17,7 @@ echo "Get the latest update..."
 pacman -Syu
 echo "Done!"
 echo "Install basic packages..."
-pacman -S acpi ifplugd neovim openssh pass rsync sudo wpa_actiond wpa_supplicant zsh tmux
+pacman -S acpi ifplugd neovim openssh pass rsync sudo wpa_actiond wpa_supplicant zsh tmux make pkgconf gcc libxft
 echo "Done!"
 
 # Create the user
