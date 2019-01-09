@@ -7,15 +7,21 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 git submodule update --init --recursive
 
 # Executable scripts/binaries
-ln -s $BASEDIR/bin/* ~/bin/
+ln -fs $BASEDIR/bin/* ~/bin/
 
 # Git
-ln -s $BASEDIR/git/gitconfig ~/.gitconfig
+ln -fs $BASEDIR/git/gitconfig ~/.gitconfig
 
 # Zsh
-ln -s $BASEDIR/zsh/zshrc ~/.zshrc
-ln -s $BASEDIR/zsh/zshenv ~/.zshenv
-#ln -s $BASEDIR/zsh/zprofile ~/.zprofile
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install spaceship zsh theme
+ln -fs $BASEDIR/spaceship-prompt/spaceship.zsh-theme $ZSH/custom/themes/spaceship.zsh-theme
+
+ln -fs $BASEDIR/zsh/zshrc ~/.zshrc
+ln -fs $BASEDIR/zsh/zshenv ~/.zshenv
+#ln -fs $BASEDIR/zsh/zprofile ~/.zprofile
 
 # Tmux
-ln -s $BASEDIR/tmux/tmux.conf ~/.tmux.conf
+ln -fs $BASEDIR/tmux/tmux.conf ~/.tmux.conf
