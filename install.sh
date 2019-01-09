@@ -16,7 +16,6 @@ ln -s $BASEDIR/git/gitconfig ~/.gitconfig
 ln -s $BASEDIR/zsh/zshrc ~/.zshrc
 ln -s $BASEDIR/zsh/zshenv ~/.zshenv
 #ln -s $BASEDIR/zsh/zprofile ~/.zprofile
-ln -s $BASEDIR/zsh/liquidprompt ~/.liquidpromptrc
 
 # Tmux
 ln -s $BASEDIR/tmux/tmux.conf ~/.tmux.conf
