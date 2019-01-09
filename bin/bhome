@@ -1,9 +1,9 @@
 #! /usr/bin/bash
 #
-# Script to backup my media folders to my Media external hard drive
+# Script to backup my home folders to my Backup external hard drive
 
-# Get the Media external hard drive device + state (mounted or not)
-# If the drive where to change DON'T FORGET to change the UUID
+# Get the Backup external hard drive device + state (mounted or not)
+# If the drive were to change DON'T FORGET to change the UUID
 DEV=($(lsblk -o PATH,UUID,MOUNTPOINT | awk '/.*ac1149fc-d08d-46a2-8297-dd9fe0c9256d.*/{print $1 " " $3}'))
 UNMOUNT=false
 
@@ -23,7 +23,12 @@ if [ -n "$DEV" ]; then
 
   # Backup important files
   echo "Backing up files..."
-  rsync -aP ~/.password-store ~/.ssh ~/archive ~/calibre ~/documents ~/ebooks ~/images ~/memories ~/nintendo ~/notes ~/wallets $MOUNTPOINT
+  rsync -avP ~/archive ~/ebooks ~/wallets $MOUNTPOINT
+  echo "Done!"
+
+  # Save state of home dir
+  echo "Saving home dir state..."
+  rsync -avP ~/.password-store ~/.ssh ~/calibre ~/documents ~/images ~/memories ~/nintendo ~/notes $MOUNTPOINT --delete
   echo "Done!"
 
 	# Export the gpg private keys if file does not exist
