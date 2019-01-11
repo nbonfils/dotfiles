@@ -17,7 +17,7 @@ echo "Get the latest update..."
 pacman -Syu
 echo "Done!"
 
-PACKAGES="cat $BASEDIR/packages.txt"
+PACKAGES=`cat $BASEDIR/packages.txt`
 echo "Install basic packages..."
 pacman -S $PACKAGES
 echo "Done!"
