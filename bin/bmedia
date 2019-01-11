@@ -4,27 +4,32 @@
 
 # Get the Media external hard drive device + state (mounted or not)
 # If the drive where to change DON'T FORGET to change the UUID
-DEV=($(lsblk -o PATH,UUID,MOUNTPOINT | awk '/.*d7bf9bb0-f12c-415b-86e4-1a9bf1c512f9.*/{print $1 " " $3}'))
+DEV=($(lsblk -o PATH,UUID,MOUNTPOINT | awk '/.*94c61bce-72be-4d5b-8943-d72477f37838.*/{print $1 " " $3}'))
 UNMOUNT=false
 
 if [ -n "$DEV" ]; then
   # If not mounted, mount first then umount at the end
   if [ -z "${DEV[1]}" ]; then
-    echo "Mounting $DEV..."
-    sudo mount $DEV /mnt
     UNMOUNT=true
+    MOUNTPOINT=/mnt
+
+    echo "Mounting $DEV on $MOUNTPOINT..."
+    sudo mount $DEV $MOUNTPOINT
     echo "Done!"
+  else
+    MOUNTPOINT=${DEV[1]}
+    echo "Backup drive already mounted on $MOUNTPOINT!"
   fi
 
   # Backup the media dirs
   echo "Backing up files..."
-  rsync -aP ~/videos/series ~/videos/films ~/music ~/videos/webms /mnt/
+  rsync -aP ~/videos/series ~/videos/films ~/music ~/videos/webms $MOUNTPOINT
   echo "Done!"
 
   # Unmount if needed
   if [ "$UNMOUNT" = true ]; then
     echo "Unmounting $DEV..."
-    sudo umount -l /mnt
+    sudo umount -l $MOUNTPOINT
     echo "Done!"
   fi
 
@@ -34,3 +39,4 @@ else
   echo "Couldn't find Media external drive!"
   exit 1
 fi
+
