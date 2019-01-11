@@ -43,3 +43,9 @@ ln -fs $BASEDIR/st/config.h $BASEDIR/st-git/config.h
 cd $BASEDIR/st-git
 sudo make clean install
 cd -
+
+
+# XORG
+ln -fs $BASEDIR/xorg/xinitrc $HOME/.xinitrc
+ln -fs $BASEDIR/xorg/Xresource $HOME/.Xresource
+ln -fs $BASEDIR/xorg/Xmodmap $HOME/.Xmodmap

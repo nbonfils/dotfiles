@@ -1,5 +1,6 @@
 acpi
 aria2
+bspwm
 calibre
 chromium
 dosfstools
@@ -29,6 +30,7 @@ python
 python-pip
 rsync
 sudo
+sxhkd
 tcpdump
 tmux
 virtualbox
@@ -36,7 +38,6 @@ weechat
 wpa_actiond
 wpa_supplicant
 xorg-server
-xorg-xdpyinfo
 xorg-xinit
 xorg-xprop
 xorg-xrandr

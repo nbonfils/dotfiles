@@ -19,6 +19,7 @@ echo "Done!"
 
 PACKAGES=`cat $BASEDIR/packages.txt`
 echo "Install basic packages..."
+echo "Choose 1, 6, 1 when asked."
 pacman -S $PACKAGES
 echo "Done!"
 
