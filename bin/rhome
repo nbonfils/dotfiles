@@ -34,7 +34,7 @@ if [ -n "$DEV" ]; then
 	# Import the gpg private key
 	if [ -f $MOUNTPOINT/privkey.asc ]; then
 	  echo "Importing GPG master key..."
-	  gpg --import $MOUNTPOINT/privkey.asc
+	  gpg -k nils.bonfils@gmail.com || gpg --import $MOUNTPOINT/privkey.asc
 	  echo "Done!"
 	else
 	  echo "GPG master key not present!"
