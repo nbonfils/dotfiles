@@ -27,7 +27,7 @@ ln -fs $BASEDIR/spaceship-prompt/spaceship.zsh-theme $ZSH/custom/themes/spaceshi
 # Link config files
 ln -fs $BASEDIR/zsh/zshrc $HOME/.zshrc
 ln -fs $BASEDIR/zsh/zshenv $HOME/.zshenv
-#ln -fs $BASEDIR/zsh/zprofile $HOME/.zprofile
+ln -fs $BASEDIR/zsh/zprofile $HOME/.zprofile
 
 # Refresh
 source ~/.zshrc
@@ -49,3 +49,8 @@ cd -
 ln -fs $BASEDIR/xorg/xinitrc $HOME/.xinitrc
 ln -fs $BASEDIR/xorg/Xresources $HOME/.Xresources
 ln -fs $BASEDIR/xorg/Xmodmap $HOME/.Xmodmap
+
+
+# WM
+ln -fs $BASEDIR/bspwm/bspwmrc $HOME/.bspwmrc
+ln -fs $BASEDIR/bspwm/sxhkdrc $HOME/.sxhkdrc

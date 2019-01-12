@@ -37,6 +37,7 @@ virtualbox
 weechat
 wpa_actiond
 wpa_supplicant
+xf86-video-intel
 xorg-server
 xorg-xinit
 xorg-xprop
