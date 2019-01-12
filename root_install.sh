@@ -43,4 +43,9 @@ systemctl enable netctl-ifplugd@enp0s31f6.service
 systemctl enable netctl-auto@wlp4s0.service
 echo "Done!"
 
+# Configuring keyboard for Xorg system-wide
+echo "Creating /etc/X11/xorg.conf.d/00-keyboard.conf to persist keybopard conf..."
+localectl --no-convert set-x11-keymap ch thinkpad fr
+echo "Done!"
+
 echo "Everything is ready, you can now unhook ethernet and finish your config as your new user ($USER)."
