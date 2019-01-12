@@ -12,6 +12,10 @@ git submodule update --init --recursive
 # Executable scripts/binaries
 ln -fs $BASEDIR/bin/* $HOME/bin/
 
+# Give correct permissions to brightness
+sudo chown root:root $BASEDIR/bin/brightness
+sudo chmod u+s $BASEDIR/bin/brightness
+
 
 # GIT
 ln -fs $BASEDIR/git/gitconfig $HOME/.gitconfig
