@@ -57,4 +57,9 @@ sed -i '/export FREETYPE_PROPERTIES/s/^#//g' /etc/profile.d/freetype2.sh
 ln -s $BASEDIR/etc/local.conf /etc/fonts/local.conf
 echo "Done!"
 
+# Save font and keymap for tty
+echo "Making tty keymap and font conf permanent..."
+echo "KEYMAP=fr_CH-latin1\nFONT=Lat2-Terminus16" >> /etc/vconsole.conf
+echo "Done!"
+
 echo "Everything is ready, you can now unhook ethernet and finish your config as your new user ($USER)."
