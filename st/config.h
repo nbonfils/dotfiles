@@ -5,8 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-// "xos4 Terminus:pixelsize=14:antialias=false";
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Fira Code:size=10:antialias=true:autohint=true:rgba=1:lcdfilter=1";
 static int borderpx = 2;
 
 /*

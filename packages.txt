@@ -34,6 +34,8 @@ sudo
 sxhkd
 tcpdump
 tmux
+ttf-dejavu
+ttf-fira-code
 virtualbox
 weechat
 wpa_actiond
