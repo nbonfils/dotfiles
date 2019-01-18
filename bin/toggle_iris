@@ -1,0 +1,20 @@
+#! /usr/bin/bash
+#
+# Script to toggle the night mode with iris
+IRIS_FILE=$HOME/.iris
+IRIS_MODE=$(cat $IRIS_FILE)
+
+case "$IRIS_MODE" in
+	"")
+		iris 3400 80
+		echo "night" > "$IRIS_FILE"
+		;;
+	"night")
+		iris 5000 100
+		echo "day" > "$IRIS_FILE"
+		;;
+	"day")
+		iris 6500 100
+		truncate -s 0 "$IRIS_FILE"
+		;;
+esac

@@ -10,6 +10,7 @@ git submodule update --init --recursive
 
 
 # Executable scripts/binaries
+mkdir -p $HOME/bin
 ln -fs $BASEDIR/bin/* $HOME/bin/
 
 # Give correct permissions to brightness
