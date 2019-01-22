@@ -27,6 +27,7 @@ openvpn
 p7zip
 pass
 pkgconf
+pwgen
 python
 python-pip
 rsync

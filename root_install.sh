@@ -62,4 +62,10 @@ echo "Making tty keymap and font conf permanent..."
 echo "KEYMAP=fr_CH-latin1\nFONT=Lat2-Terminus16" >> /etc/vconsole.conf
 echo "Done!"
 
+# Restore resolvconf.conf config in order to avoid f*cking ISP DNS, use cloudflare instead
+echo "Setting up resolvconf.conf..."
+ln -sf $BASEDIR/etc/resolvconf.conf /etc/resolvconf.conf
+resolvconf -u
+echo "Done!"
+
 echo "Everything is ready, you can now unhook ethernet and finish your config as your new user ($USER)."
