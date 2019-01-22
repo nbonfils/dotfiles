@@ -1,0 +1,8 @@
+XDG_DESKTOP_DIR="/home/nature"
+XDG_DOWNLOAD_DIR="/home/nature/downloads"
+XDG_TEMPLATES_DIR="/home/nature"
+XDG_PUBLICSHARE_DIR="/home/nature"
+XDG_DOCUMENTS_DIR="/home/nature/documents"
+XDG_MUSIC_DIR="/home/nature/music"
+XDG_PICTURES_DIR="/home/nature/images"
+XDG_VIDEOS_DIR="/home/nature/videos"

@@ -15,9 +15,6 @@ export GIT_AUTHOR_EMAIL="nils.bonfils@epfl.ch"
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
-# XDG to prevent firefox from creating "Desktop" dir
-export XDG_DESKTOP_DIR="$HOME"
-
 # Set the GOPATH
 #export GOPATH=$(go env GOPATH)
 

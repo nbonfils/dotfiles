@@ -59,3 +59,7 @@ ln -fs $BASEDIR/xorg/Xmodmap $HOME/.Xmodmap
 # WM
 ln -fs $BASEDIR/bspwm/bspwmrc $HOME/.bspwmrc
 ln -fs $BASEDIR/bspwm/sxhkdrc $HOME/.sxhkdrc
+
+
+# FIREFOX
+ln -fs $BASEDIR/firefox/user-dirs.dirs $HOME/.config/user-dirs.dirs
