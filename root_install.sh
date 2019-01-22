@@ -68,4 +68,17 @@ ln -sf $BASEDIR/etc/resolvconf.conf /etc/resolvconf.conf
 resolvconf -u
 echo "Done!"
 
+# Make a swap file
+# TODO Check wether a swap partition already exists
+echo "Creating swap file..."
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+cat <<EOF >> /etc/fstab
+# Swap
+/swapfile none swap defaults 0 0
+EOF
+echo "Done!"
+
 echo "Everything is ready, you can now unhook ethernet and finish your config as your new user ($USER)."
