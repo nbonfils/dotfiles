@@ -140,7 +140,6 @@ XF86Display
 # XF86AudioMicMute
 # XF86WLAN
 # XF86Tools
-# XF86LaunchA
 # XF86Explorer
 
 #
@@ -150,3 +149,7 @@ XF86Display
 # Firefox
 XF86Search
 	firefox
+
+# VSCode
+XF86LaunchA
+	code

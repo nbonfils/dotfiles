@@ -4,6 +4,7 @@ aria2
 bspwm
 calibre
 chromium
+code
 dosfstools
 feh
 firefox
