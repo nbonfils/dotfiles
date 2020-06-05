@@ -4,7 +4,8 @@
 
 # terminal emulator
 super + Return
-	st -e tmux
+    st
+	#st -e tmux
 
 # Scratchpad
 super + space
@@ -148,8 +149,26 @@ XF86Display
 
 # Firefox
 XF86Search
+	brave
+shift + XF86Search
 	firefox
 
 # VSCode
 XF86LaunchA
 	code
+
+# Godot
+shift + XF86LaunchA
+	godot
+
+# Lutris
+XF86Tools
+	steam
+
+# Lutris
+shift + XF86Tools
+	lutris
+
+# xfreerdp
+XF86Explorer
+	xfreerdp /u:Metalskull /p:tototutu123 /f /sound /clipboard /v:192.168.2.2

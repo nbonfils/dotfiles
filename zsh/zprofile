@@ -9,3 +9,5 @@ fi
 
 eval $(ssh-agent) &> /dev/null
 ssh-add ~/.ssh/nopass_id_rsa &> /dev/null
+
+# export PATH="$HOME/.cargo/bin:$PATH"

@@ -153,6 +153,8 @@ alias sshlivebox='ssh -p 4500 -N -L 3000:localhost:4501 pi@schoolhelp.internet-b
 alias ssh='TERM=xterm-256color ssh'
 alias ru='setxkbmap ru'
 alias фр='setxkbmap ch fr'
+alias smpv='mpv --profile=svp'
+alias vim='nvim'
 #alias tank='mount -t nfs cloud.blazebone.com:/tank/ ~/tank'
 
 # Display a csv file

@@ -44,7 +44,6 @@ ln -fs $BASEDIR/tmux/tmux.conf $HOME/.tmux.conf
 
 # ST
 # Build and install
-ln -fs $BASEDIR/st/config.h $BASEDIR/st-git/config.h
 cd $BASEDIR/st-git
 sudo make clean install
 cd -

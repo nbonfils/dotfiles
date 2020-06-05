@@ -11,9 +11,14 @@ export EDITOR=nvim
 
 # Set git environment
 export GIT_AUTHOR_NAME="nbonfils"
-export GIT_AUTHOR_EMAIL="nils.bonfils@epfl.ch"
+export GIT_AUTHOR_EMAIL="nils.bonfils@gmail.com"
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
+
+# Set path for NPM
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH="${NPM_PACKAGES}/lib/node_modules:${NODE_PATH}"
+path=("${NPM_PACKAGES}/bin" $path)
 
 # Set the GOPATH
 #export GOPATH=$(go env GOPATH)
@@ -22,3 +27,9 @@ export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 #export ANDROID_HOME=$HOME/Android/Sdk
 #path+=($ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools)
 #export PATH
+
+# Set path for Rust
+path=("$HOME/.cargo/bin" $path)
+
+# use ripgrep with fzf
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!.git/*"'

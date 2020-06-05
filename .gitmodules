@@ -1,6 +1,7 @@
 [submodule "st-git"]
 	path = st-git
-	url = https://git.suckless.org/st
+    #url = https://git.suckless.org/st
+    url = https://github.com/lukesmithxyz/st
 [submodule "spaceship-prompt"]
 	path = spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git

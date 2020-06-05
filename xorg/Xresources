@@ -11,25 +11,80 @@
 !xterm*faceName: DejaVu Sans Mono Book
 !xterm*faceSize: 9
 
-! Base16 Atelier Forest
-! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+!! Transparency is useless lol
+st.alpha: 1
 
-#define base00 #1b1918
-#define base01 #2c2421
-#define base02 #68615e
-#define base03 #766e6b
-#define base04 #9c9491
-#define base05 #a8a19f
-#define base06 #e6e2e0
-#define base07 #f1efee
-#define base08 #f22c40
-#define base09 #df5320
-#define base0A #d5911a
-#define base0B #5ab738
-#define base0C #00ad9c
-#define base0D #407ee7
-#define base0E #6666ea
-#define base0F #c33ff3
+!! Snazzy
+#define base00 #282a36
+#define base01 #34353e
+#define base02 #43454f
+#define base03 #78787e
+#define base04 #a5a5a9
+#define base05 #e2e4e5
+#define base06 #eff0eb
+#define base07 #f1f1f0
+#define base08 #ff5c57
+#define base09 #ff9f43
+#define base0A #f3f99d
+#define base0B #5af78e
+#define base0C #9aedfe
+#define base0D #57c7ff
+#define base0E #ff6ac1
+#define base0F #b2643c
+
+!! Railscasts
+!#define base00 #2b2b2b
+!#define base01 #272935
+!#define base02 #3a4055
+!#define base03 #5a647e
+!#define base04 #d4cfc9
+!#define base05 #e6e1dc
+!#define base06 #f4f1ed
+!#define base07 #f9f7f3
+!#define base08 #da4939
+!#define base09 #cc7833
+!#define base0A #ffc66d
+!#define base0B #a5c261
+!#define base0C #519f50
+!#define base0D #6d9cbe
+!#define base0E #b6b3eb
+!#define base0F #bc9458
+
+!! Solareflare
+!#define base00 #18262f
+!#define base01 #222e38
+!#define base02 #586875
+!#define base03 #667581
+!#define base04 #85939e
+!#define base05 #a6afb8
+!#define base06 #e8e9ed
+!#define base07 #f5f7fa
+!#define base08 #ef5253
+!#define base09 #e66b2b
+!#define base0A #e4b51c
+!#define base0B #7cc844
+!#define base0C #52cbb0
+!#define base0D #33b5e1
+!#define base0E #a363d5
+!#define base0F #d73c9a
+
+!! Woodland
+!#define base00 #231e18
+!#define base01 #302b25
+!#define base02 #48413a
+!#define base03 #9d8b70
+!#define base04 #b4a490
+!#define base05 #cabcb1
+!#define base06 #d7c8bc
+!#define base07 #e4d4c8
+!#define base08 #d35c5c
+!#define base09 #ca7f32
+!#define base0A #e0ac16
+!#define base0B #b7ba53
+!#define base0C #6eb958
+!#define base0D #88a4d3
+!#define base0E #bb90e2
+!#define base0F #b49368
 
 *.foreground: base05
 *.background: base00
