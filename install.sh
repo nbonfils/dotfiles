@@ -62,3 +62,8 @@ ln -fs $BASEDIR/bspwm/sxhkdrc $HOME/.sxhkdrc
 
 # FIREFOX
 ln -fs $BASEDIR/firefox/user-dirs.dirs $HOME/.config/user-dirs.dirs
+
+# NEWSBOAT
+mkdir $HOME/.newsboat
+ln -fs $BASEDIR/newsboat/urls $HOME/.newsboat/urls 
+ln -fs $BASEDIR/newsboat/config $HOME/.newsboat/config

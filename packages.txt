@@ -17,6 +17,7 @@ make
 mkvtoolnix-cli
 mpv
 neovim
+newsboat
 nfs-utils
 nmap
 npm
