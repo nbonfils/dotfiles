@@ -5,8 +5,8 @@ bspwm
 calibre
 chromium
 dosfstools
+falkon
 feh
-firefox
 fzf
 gcc
 go
@@ -17,6 +17,7 @@ make
 mkvtoolnix-cli
 mpv
 neovim
+netctl
 newsboat
 nfs-utils
 nmap
@@ -46,7 +47,6 @@ virtualbox
 weechat
 wireguard-dkms
 wireguard-tools
-wpa_actiond
 wpa_supplicant
 xf86-video-intel
 xorg-server

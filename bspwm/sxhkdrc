@@ -147,11 +147,16 @@ XF86Display
 # Open Programs
 #
 
-# Firefox
+super + d
+    dmenu_run
+
+# Brave
 XF86Search
-	brave
+	chromium
+
+# Firefox
 shift + XF86Search
-	firefox
+    falkon
 
 # VSCode
 XF86LaunchA

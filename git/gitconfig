@@ -1,3 +1,5 @@
 [user]
 	name = nbonfils
 	email = nils.bonfils@gmail.com
+[color]
+	ui = auto

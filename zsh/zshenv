@@ -29,7 +29,10 @@ path=("${NPM_PACKAGES}/bin" $path)
 #export PATH
 
 # Set path for Rust
-path=("$HOME/.cargo/bin" $path)
+path=("${HOME}/.cargo/bin" $path)
 
 # use ripgrep with fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!.git/*"'
+
+# Set path for platfoormio
+path=($path "${HOME}/.platformio/penv/bin")

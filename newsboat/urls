@@ -1,3 +1,14 @@
-https://krebsonsecurity.com/feed/ "Security"
-https://us8.campaign-archive.com/feed?u=f6016bea433d2847e02b2bede&id=cf4abf8f4d "Space"
+https://stallman.org/rss/rss.xml "Linux" "Tech" "Policy" "Activist"
+https://theintercept.com/staff/glenn-greenwald/feed/?rss "Policy" "Activist"
 https://lukesmith.xyz/rss.xml "Linux" "Tech"
+https://krebsonsecurity.com/feed/ "Security"
+
+https://theintercept.com/feed/?lang=en "News"
+http://feeds.arstechnica.com/arstechnica/technology-lab "News" "Tech"
+http://feeds.arstechnica.com/arstechnica/tech-policy "News" "Policy"
+http://feeds.arstechnica.com/arstechnica/science "News" "Science"
+
+https://us8.campaign-archive.com/feed?u=f6016bea433d2847e02b2bede&id=cf4abf8f4d "~Swiss Space Center" "Space" "Science"
+https://www.nasa.gov/rss/dyn/breaking_news.rss "Space" "News"
+https://www.nasa.gov/rss/dyn/educationnews.rss "Space"
+http://www.jpl.nasa.gov/multimedia/rss/news.xml "Space"
