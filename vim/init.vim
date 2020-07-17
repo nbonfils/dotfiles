@@ -23,6 +23,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin(stdpath('data') . '/plugged')
 "Plug 'stephpy/vim-yaml'
+Plug 'lnl7/vim-nix'
 Plug 'pearofducks/ansible-vim'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
