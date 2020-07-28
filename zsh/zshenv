@@ -36,3 +36,6 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!.git/*"'
 
 # Set path for platfoormio
 path=($path "${HOME}/.platformio/penv/bin")
+
+# Set path for nim
+path=($path "${HOME}/.nimble/bin")
