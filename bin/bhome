@@ -23,12 +23,12 @@ if [ -n "$DEV" ]; then
 
   # Backup important files
   echo "Backing up files..."
-  rsync -avP ~/archive ~/ebooks ~/wallets $MOUNTPOINT
+  rsync -avP ~/archive ~/ebooks ~/dev ~/documents ~/memories ~/wallets $MOUNTPOINT
   echo "Done!"
 
   # Save state of home dir
   echo "Saving home dir state..."
-  rsync -avP ~/.password-store ~/.ssh ~/calibre ~/documents ~/images ~/memories ~/nintendo ~/notes $MOUNTPOINT --delete
+  rsync -avP ~/.password-store ~/.ssh ~/calibre ~/homelab ~/images ~/nintendo ~/notes ~/syncthing $MOUNTPOINT --delete
   echo "Done!"
 
 	# Export the gpg private keys if file does not exist
